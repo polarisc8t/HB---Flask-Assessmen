@@ -12,9 +12,18 @@ app.secret_key = "ABC"
 def index_page():
     """Show an index page."""
 
-    request.form.get()
-
-    return "application-form.html<body>This is the homepage.</body></html>"
+    first_name = request.form.get(firstname)
+    last_name = request.form.get(lastname)
+    job_choice = request.form.get(jobchoice) 
+    salary = request.form.get(salary)
+    
+    return """
+        <!DOCTYPE html>
+        <html>
+            <body>Thank you %s %s, for applying to be a %s. Your minimum salary is %d dollars.
+            </body>
+        </html>
+       """%(first_name, last_name, job_choice, salary)
 
     # Alternately, we could make this a Jinja template in `templates/`
     # and return that result of rendering this, like:

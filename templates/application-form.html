@@ -1,13 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Skills-Web</title>
-    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>
+    JOB SEARCH TAB
+    </title>
+    <h15><b> Job Search Form!</b></h15>
+    <p>This purpose of this application form is to exercise understanding of basic HTML and CSS. 
+       The user will input his/her first and last name, select ideal job from the drop down menu 
+       choices, and then push the 'submit' button</p>
 </head>
+
 <body>
-
-<!-- This page needs a form that can capture data about the user's
-first name, last name, job title, and salary requirements. -->
-
+<form action="/application" method="PUSH">
+  First name: <input type="text" name="firstname"><br>
+  Last name:  <input type="text" name="lastname"><br>
+  Salary:     <input type="text" name="salary"><br>
+  <input type="submit" value="Submit">
+</form>    
+<form>
+Choose your job of choice:
+    <select name="jobchoice">
+        <option value="SW Engineer">SW Engineer</option>
+        <option value="QA Engineer">QA Engineer</option>
+        <option value="Product Manager">Product Manager</option>
+    </select>
+    <input type="Submit" value="Submit Form"> 
+</form>
 </body>
+
 </html>
