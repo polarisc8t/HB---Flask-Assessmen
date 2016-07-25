@@ -1,0 +1,19 @@
+create a virtual environment and activate it
+
+install requirements.txt that is included w/the assignment
+
+write a small flask app in application.py that:
+
+serves the template application-form.html at the route /application-form. use the application-form made in skills-html-css
+
+handles submission of a form in application-form.html to the route /application
+
+gets the first/last name/ salary/job title from teh form submission
+
+returns a response that acknowledges their application. this should repeat their name, title, and salary requirements like:
+
+"thank you, jessica mchackbright, for applying to be a QA engineer. Your minum salary requiremen is x dollars"
+
+You should do that w/a jinja template 
+
+create a new template called base.html. have your other two templates inherit from base.html using jinja's (% extend %) and {% block %} syntax
